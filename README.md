@@ -39,7 +39,6 @@ About how to use arrays in verilog
 http://www.verilogpro.com/verilog-arrays-plain-simple/  
 Q&A about proper way to initialize registers in verilog  
 https://electronics.stackexchange.com/questions/226959/is-it-right-to-initialize-a-reg-in-verilog-and-apply-condition-with-initial-valu  
----
 Verilog HDL basics  
 https://cseweb.ucsd.edu/classes/sp11/cse141L/pdf/01/SV_Part_1.pdf  
 https://cseweb.ucsd.edu/classes/sp11/cse141L/pdf/02/02-Verilog2a.pdf  
