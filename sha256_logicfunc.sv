@@ -83,16 +83,16 @@ new_rightrotater #(25) rot25(.x(e), .y(e_25));
 endmodule
 
 
-module T1 (input [31:0] h, S1_out, ch_out, k_i, w_i,
-			  output[31:0] T1_out);
-
-endmodule
-
-
-module T2 (input [31:0] S0_out, maj_out,
-			  output[31:0] T2_out);
-
-endmodule
+//module T1 (input [31:0] h, S1_out, ch_out, k_i, w_i,
+//			  output[31:0] T1_out);
+//
+//endmodule
+//
+//
+//module T2 (input [31:0] S0_out, maj_out,
+//			  output[31:0] T2_out);
+//
+//endmodule
 
 
 

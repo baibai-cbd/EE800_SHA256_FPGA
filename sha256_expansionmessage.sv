@@ -51,7 +51,7 @@ assign w_new = s1_out + w_7 + s0_out + w_16;
 endmodule
 
 
-module w_state_machine (input clk, Reset, Add, Load,
+module w_state_machine (input clk, Reset, w_init, w_next,
 								output init, next);
 								
 enum logic [3:0] {	RESET, IDLE, DONE,
@@ -82,12 +82,12 @@ always_comb
 			end
 			
 			IDLE: begin
-				if (Load == 1'b0)
+				if (w_init == 1'b1)
 				begin
 					next_state = LOAD1;
 				end
 				else
-				if (Add == 1'b0)
+				if (w_next == 1'b1)
 				begin
 					next_state = NEXT1;
 				end
@@ -98,24 +98,10 @@ always_comb
 			end
 				
 			LOAD1: begin
-				if (Load == 1'b1)
-					next_state = LOAD2;
-				else
-					next_state = LOAD1;
-			end
-			
-			LOAD2: begin
 					next_state = IDLE;
 			end
 			
 			NEXT1: begin
-				if (Add == 1'b1)
-					next_state = NEXT2;
-				else
-					next_state = NEXT1;
-			end
-			
-			NEXT2: begin
 					next_state = IDLE;
 			end
 		endcase
@@ -134,16 +120,10 @@ always_comb
 			end
 			
 			LOAD1: begin
-			end
-			
-			LOAD2: begin
 					init = 1'b1;
 			end
 			
 			NEXT1: begin
-			end
-			
-			NEXT2: begin
 					next = 1'b1;
 			end
 		endcase
