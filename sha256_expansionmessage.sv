@@ -51,8 +51,10 @@ assign w_new = s1_out + w_7 + s0_out + w_16;
 endmodule
 
 
+//depreciated
+/*
 module w_state_machine (input clk, Reset, w_init, w_next,
-								output init, next);
+								output logic init, next);
 								
 enum logic [3:0] {	RESET, IDLE, DONE,
 							LOAD1, LOAD2,
@@ -130,8 +132,7 @@ always_comb
 	end
 
 endmodule
-
-
+*/
 
 
 

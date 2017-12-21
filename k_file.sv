@@ -6,7 +6,7 @@
 
 
 module k_file (input [6:0] sel,
-					output[31:0] k_out);
+					output logic[31:0] k_out);
 
 logic [31:0] k_value[63:0];
 
